@@ -3,7 +3,7 @@
 
 ## Overview  
 
-Genome Nexus [1] is a command line tool for the annotation and interpretation of mutations in cancer. cBioPortal leverages Genome Nexus' API to show how a mutation might change the protein or how often a mutation occurs in healthy populations or patients with cancer. The workflow of how Genome Nexus related to cBioPortal is shown below:
+Genome Nexus [^1] is a command line tool for the annotation and interpretation of mutations in cancer. cBioPortal leverages Genome Nexus' API to show how a mutation might change the protein or how often a mutation occurs in healthy populations or patients with cancer. The workflow of how Genome Nexus related to cBioPortal is shown below:
 
 ![plot](./workflow.png)
 
@@ -27,6 +27,7 @@ Here is the list of approved activities such as pull requests and their respecti
 ### 2. Goal #2 'Improve documentation' related activities:  
 
 * Improve documentation [#215](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/issues/215), [#219](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/219), [d51a557](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/commit/d51a5576d2cc050c07ea8be466e4336223e6e26e)
+* Click [**here**](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/blob/master/CMD_HELP.md) for the documentation page.
 
 ### 3. Additional activities:  
 
@@ -72,10 +73,36 @@ Total amount of tests increased from 16 to 68. Respective issues: [#202](https:/
   * Address Rmadupuri test errors [#223](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/issues/223), [#224](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/224), [0a95018](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/commit/0a950182fba7a916b810faeb788db242c38e23fc)
 
 
-## Coming Features
-Annotation of big mutation file without failure [#216](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/issues/216)
+## Coming Features  
+* Annotation of big mutation files without failure [#216](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/issues/216)
+  * The tool uses too much memory, and it takes too long to annotate a MAF file that includes more than a million records.
+    * Runtime-wise problem is solved [#227](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/227), [788e04c](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/227/commits/788e04cc7569f719ed103561d80308dd5ce622f6)
+      * ~50% performance increase
+      * Additional experimental branch that addresses related issues [#226](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/226)
+        * As a bonus, with the new data presentation layer coming with this feature, the removal of empty columns is straightforward
+    * Memory-wise problem is addressed [#216#issuecomment-1241965326](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/issues/216#issuecomment-1241965326)
+* The option named **split-output** [#209](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/209), [feaee5a](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/209/commits/feaee5a39249b7f1c93ec92cbe614e866a3a7e8d) 
+  * This option produces two additional files based on the value of annotation status of a variant. 
+* Fix the metric total runtime [#228](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/228), [c873281](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/228/commits/c873281c15a369dbc5ee9e9bfe51c4eada954513)
 
-## Future
 
-[1] de Bruijn I, Li X, Sumer SO, et al. Genome Nexus: A Comprehensive Resource for the Annotation and Interpretation of Genomic Variants in Cancer. JCO Clin Cancer Inform. 2022;6:e2100144. doi:10.1200/CCI.21.00144
+## Future  
+* The runtime of the application should be improved further by sending multiple requests at a time as much as possible.  
+* The need for Spring Batch Framework should be reconsidered.  
+  * As an example, after profiling, I saw that the main bottlenecks of the application are caused by misconfiguration of the chunk size and the metadata production for persistence. Both are features of Spring Batch that the application doesn’t need. And additionally, the application isn't using multiple jobs and multiple steps either.  
+* More tests and assertions won’t hurt.  
+* Using a test coverage service like Coveralls might be a good addition to the established CircleCI pipeline.
+* A universal code formatting should be decided and forced
+
+
+## Closing  
+
+This open source project is the first project that I contributed besides the ones that I self-published. It was a pleasure to contribute.  
+Working within very different timezones
+
+I would like to thank to Google and GSoC team that make it happen.
+I would also like to thank to my mentors and my teammates:
+
+
+[^1]: de Bruijn I, Li X, Sumer SO, et al. Genome Nexus: A Comprehensive Resource for the Annotation and Interpretation of Genomic Variants in Cancer. JCO Clin Cancer Inform. 2022;6:e2100144. doi:10.1200/CCI.21.00144
 
