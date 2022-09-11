@@ -98,10 +98,11 @@ Total amount of tests increased from 16 to 68. Respective issues: [#202](https:/
 ## Closing  
 
 This open source project is the first project that I contributed besides the ones that I self-published. It was a pleasure to contribute.  
-Working within very different timezones
 
-I would like to thank to Google and GSoC team that make it happen.
-I would also like to thank to my mentors and my teammates:
+Working in a multicultural team with teammates in different timezones sounds like it should be a challenge but when you and your teammates have the correct mindset, tools, and pipelines built on these tools, it is a joy. 
+
+I would like to thank Google and the people organise GSoC.  
+I would also like to thank my mentors and my teammates: (Jag) Prasanna K Jagannathan, [Ino de Bruijn](http://ino.pm/), [Ramya Madupuri](https://www.linkedin.com/in/ramyasree-madupuri/)
 
 
 [^1]: de Bruijn I, Li X, Sumer SO, et al. Genome Nexus: A Comprehensive Resource for the Annotation and Interpretation of Genomic Variants in Cancer. JCO Clin Cancer Inform. 2022;6:e2100144. doi:10.1200/CCI.21.00144
