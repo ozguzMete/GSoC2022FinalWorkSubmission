@@ -74,7 +74,7 @@ Total amount of tests increased from 16 to 68. Respective issues: [#202](https:/
 
 
 ## Coming Features  
-* Annotation of big mutation files without failure [#216](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/issues/216)
+* Performance improvements
   * The tool uses too much memory, and it takes too long to annotate a MAF file that includes more than a million records.
     * Runtime-wise problem is solved [#227](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/227), [788e04c](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/227/commits/788e04cc7569f719ed103561d80308dd5ce622f6)
       * ~50% performance increase
