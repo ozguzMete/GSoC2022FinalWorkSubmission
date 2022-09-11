@@ -9,7 +9,7 @@ Genome Nexus [^1] is a command line tool for the annotation and interpretation o
 
 ## Goals  
 
-Currently, there a variety of different tools to help with this including
+Currently, there are a variety of different tools to help with this including
 * [genome-nexus-annotation-pipeline](https://github.com/genome-nexus/genome-nexus-annotation-pipeline) for annotation of MAF files,
 * [annotation-tools](https://github.com/genome-nexus/annotation-tools) for annotation of VCF files and
 * [genome-nexus-cli](https://github.com/genome-nexus/genome-nexus-cli) with a redesigned interface for both.
@@ -51,7 +51,7 @@ Respective pull requests and issues: [#210](https://github.com/genome-nexus/geno
 
 
 * **Improvement:** Unit tests, integration tests    
-Total amount of tests increased from 16 to 68. Respective issues: [#202](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/issues/202) 
+The total amount of tests increased from 16 to 68. Respective issues: [#202](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/issues/202) 
   * Add tests for MutationRecordProcessor [#207](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/207), [e2e8c65](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/commit/e2e8c655fd0203ca34a92540d37e7fe407e3196c), [c3b1574](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/commit/c3b15741889b24db71bed12545921c7f0decaf5b)
   * Convert config.yml to unit tests [#200](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/200), [ab7b1b0](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/commit/ab7b1b0f96c4e1d1c388772f5c0355b18f3020be), [1a5dd65](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/commit/1a5dd658db4c059d5ba4dca8815e083d6e0d4a23)
   * Remove converted tests from config.yml [#200](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/200), [71b2d50](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/commit/71b2d508ba441c3a048a0c4cbd09723d35478dea)
@@ -82,7 +82,7 @@ Total amount of tests increased from 16 to 68. Respective issues: [#202](https:/
         * As a bonus, with the new data presentation layer coming with this feature, the removal of empty columns is straightforward
     * Memory-wise problem is addressed [#216#issuecomment-1241965326](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/issues/216#issuecomment-1241965326)
 * The option named **split-output** [#209](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/209), [feaee5a](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/209/commits/feaee5a39249b7f1c93ec92cbe614e866a3a7e8d) 
-  * This option produces two additional files based on the value of annotation status of a variant. 
+  * This option produces two additional files based on the value of the annotation status of a variant. 
 * Fix the metric total runtime [#228](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/228), [c873281](https://github.com/genome-nexus/genome-nexus-annotation-pipeline/pull/228/commits/c873281c15a369dbc5ee9e9bfe51c4eada954513)
 
 
@@ -99,9 +99,9 @@ Total amount of tests increased from 16 to 68. Respective issues: [#202](https:/
 
 This open source project is the first project that I contributed besides the ones that I self-published. It was a pleasure to contribute.  
 
-Working in a multicultural team with teammates in different timezones sounds like it should be a challenge but when you and your teammates have the correct mindset, tools, and pipelines built on these tools, it is a joy. 
+Working in a multicultural team with teammates in different time zones sounds like it should be a challenge, but when you and your teammates have the correct mindset, tools, and pipelines built on these tools, it is a joy. 
 
-I would like to thank Google and the people organise GSoC.  
+I would like to thank Google and the people who organize GSoC.  
 I would also like to thank my mentors and my teammates: (Jag) Prasanna K Jagannathan, [Ino de Bruijn](http://ino.pm/), [Ramya Madupuri](https://www.linkedin.com/in/ramyasree-madupuri/)
 
 
